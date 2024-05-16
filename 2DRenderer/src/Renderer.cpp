@@ -1,7 +1,9 @@
 #include "Renderer.h"
 
-Renderer::Renderer()
+Renderer::Renderer(Window* _window)
 {
+	window = _window;
+
 	shader = Shader("src/Shaders/Default/shader.vs", "src/Shaders/Default/shader.fs");
 	
 	glGenVertexArrays(1, &VAO);
@@ -22,6 +24,9 @@ Renderer::Renderer()
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 7 * sizeof(float), (void*)(5 * sizeof(float)));
 	glEnableVertexAttribArray(2);
+
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 Renderer::~Renderer()

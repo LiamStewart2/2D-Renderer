@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Window.h"
 #include "Shader.h"
 #include "Sprite.h"
 #include "Texture.h"
@@ -7,7 +8,8 @@
 class Renderer
 {
 public:
-	Renderer();
+	Renderer(Window* _window);
+	Renderer() {}
 	~Renderer();
 
 	void EnableDebug();
@@ -18,6 +20,8 @@ public:
 
 	void setBackgroundColor(float r, float g, float b);
 private:
+	Window* window;
+
 	Shader shader;
 	Texture RectTexture;
 
