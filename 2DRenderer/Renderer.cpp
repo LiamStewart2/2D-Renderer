@@ -27,6 +27,11 @@ Renderer::~Renderer()
 
 }
 
+void Renderer::clear()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
 void Renderer::drawRect(float x, float y, float w, float h, float r, float g, float b)
 {
 	shader.useShader();

@@ -9,7 +9,8 @@ public:
 	~Renderer();
 
 	void EnableDebug();
-
+	
+	void clear();
 	void drawRect(float x, float y, float w, float h, float r, float g, float b);
 private:
 	Shader shader;
