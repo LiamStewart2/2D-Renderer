@@ -2,6 +2,9 @@
 #include "Renderer.h"
 #include "Sprite.h"
 
+// TODO::
+// FIX ISSUE WITH ASPECT RATIO STRETCHING IMAGES
+
 int main(void)
 {
     Window window = Window(800, 800, "2D Renderer");
