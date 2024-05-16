@@ -1,14 +1,14 @@
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-
 #include "Window.h"
 #include "Renderer.h"
+#include "Sprite.h"
 
 int main(void)
 {
     Window window = Window(1080, 720, "2D Renderer");
     Renderer* renderer = new Renderer();
     
+    Sprite sprite = Sprite("res/sprites/player.png");
+
     float x = -1.0f;
     float r = 1.0f;
     float dir = -0.001f;
@@ -21,6 +21,8 @@ int main(void)
         r += dir;
         if (r <= 0.0f || r >= 1.0f)
             dir *= -1;
+
+        renderer->drawSprite(sprite, -0.8f, 0.2f, 0.0004f);
 
         window.update();
 

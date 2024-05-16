@@ -145,10 +145,11 @@
     <ClInclude Include="src\Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Shaders\RectShader\RectShader.fs" />
-    <None Include="src\Shaders\RectShader\RectShader.vs" />
-    <None Include="src\Shaders\SpriteShader\SpriteShader.fs" />
-    <None Include="src\Shaders\SpriteShader\SpriteShader.vs" />
+    <None Include="src\Shaders\Default\shader.fs" />
+    <None Include="src\Shaders\Default\shader.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\sprites\player.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

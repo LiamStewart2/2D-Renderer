@@ -2,6 +2,7 @@
 
 #include "Shader.h"
 #include "Sprite.h"
+#include "Texture.h"
 
 class Renderer
 {
@@ -13,10 +14,12 @@ public:
 	
 	void clear();
 	void drawRect(float x, float y, float w, float h, float r, float g, float b);
-	void drawSprite(Sprite sprite, float x, float y, float w, float h);
+	void drawSprite(Sprite sprite, float x, float y, float scale);
 private:
 	Shader shader;
-	float RectVertices[4 * (2 + 3)];
+	Texture RectTexture;
+
+	float RectVertices[4 * (2 + 3 + 2)];
 
 	unsigned int indices[6] = {
 		0, 1, 3,

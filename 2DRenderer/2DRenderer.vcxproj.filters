@@ -61,17 +61,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Shaders\RectShader\RectShader.fs">
+    <None Include="src\Shaders\Default\shader.fs">
       <Filter>Shaders\RectShader</Filter>
     </None>
-    <None Include="src\Shaders\RectShader\RectShader.vs">
+    <None Include="src\Shaders\Default\shader.vs">
       <Filter>Shaders\RectShader</Filter>
     </None>
-    <None Include="src\Shaders\SpriteShader\SpriteShader.fs">
-      <Filter>Shaders\SpriteShader</Filter>
-    </None>
-    <None Include="src\Shaders\SpriteShader\SpriteShader.vs">
-      <Filter>Shaders\SpriteShader</Filter>
-    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\sprites\player.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
