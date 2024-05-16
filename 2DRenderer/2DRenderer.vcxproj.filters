@@ -16,41 +16,56 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{d4f049d7-04df-4d32-bf54-591c3c1cfd02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Shaders\DefaultShader">
+    <Filter Include="Shaders\RectShader">
       <UniqueIdentifier>{c8641b51-eb10-4c2c-a8c5-109184f258df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\SpriteShader">
+      <UniqueIdentifier>{1fd1f2d7-450e-421e-b6e2-dabd173d8f2a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
+    <ClCompile Include="src\Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shader.cpp">
+    <ClCompile Include="src\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="src\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Renderer.h">
+    <ClInclude Include="src\Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="src\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
+    <ClInclude Include="src\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.vs">
-      <Filter>Shaders\DefaultShader</Filter>
+    <None Include="src\Shaders\RectShader\RectShader.fs">
+      <Filter>Shaders\RectShader</Filter>
     </None>
-    <None Include="shader.fs">
-      <Filter>Shaders\DefaultShader</Filter>
+    <None Include="src\Shaders\RectShader\RectShader.vs">
+      <Filter>Shaders\RectShader</Filter>
+    </None>
+    <None Include="src\Shaders\SpriteShader\SpriteShader.fs">
+      <Filter>Shaders\SpriteShader</Filter>
+    </None>
+    <None Include="src\Shaders\SpriteShader\SpriteShader.vs">
+      <Filter>Shaders\SpriteShader</Filter>
     </None>
   </ItemGroup>
 </Project>

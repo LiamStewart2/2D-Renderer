@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Shader.h"
+#include "Sprite.h"
 
 class Renderer
 {
@@ -12,6 +13,7 @@ public:
 	
 	void clear();
 	void drawRect(float x, float y, float w, float h, float r, float g, float b);
+	void drawSprite(Sprite sprite, float x, float y, float w, float h);
 private:
 	Shader shader;
 	float RectVertices[4 * (2 + 3)];

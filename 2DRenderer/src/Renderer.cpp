@@ -2,7 +2,7 @@
 
 Renderer::Renderer()
 {
-	shader = Shader("shader.vs", "shader.fs");
+	shader = Shader("src/Shaders/RectShader/RectShader.vs", "src/Shaders/RectShader/RectShader.fs");
 	
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
