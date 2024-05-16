@@ -135,12 +135,14 @@
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\Sprite.cpp" />
     <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer.h" />
     <ClInclude Include="src\Shader.h" />
     <ClInclude Include="src\Sprite.h" />
     <ClInclude Include="src\Window.h" />
+    <ClInclude Include="src\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Shaders\RectShader\RectShader.fs" />
