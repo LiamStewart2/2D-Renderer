@@ -15,9 +15,15 @@ public:
 	void clear();
 	void drawRect(float x, float y, float w, float h, float r, float g, float b);
 	void drawSprite(Sprite sprite, float x, float y, float scale);
+
+	void setBackgroundColor(float r, float g, float b);
 private:
 	Shader shader;
 	Texture RectTexture;
+
+	float backgroundColorR = 1.0f;
+	float backgroundColorG = 1.0f;
+	float backgroundColorB = 1.0f;
 
 	float RectVertices[4 * (2 + 3 + 2)];
 

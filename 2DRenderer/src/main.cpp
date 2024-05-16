@@ -6,6 +6,7 @@ int main(void)
 {
     Window window = Window(1080, 720, "2D Renderer");
     Renderer* renderer = new Renderer();
+    renderer->setBackgroundColor(0.3f, 0.4f, 0.6f);
     
     Sprite sprite = Sprite("res/sprites/player.png");
 
@@ -23,6 +24,8 @@ int main(void)
             dir *= -1;
 
         renderer->drawSprite(sprite, -0.8f, 0.2f, 0.0004f);
+        renderer->drawSprite(sprite, 0.8f, 0.2f, 0.0004f);
+        renderer->drawSprite(sprite, -0.8f, -0.4f, 0.0004f);
 
         window.update();
 

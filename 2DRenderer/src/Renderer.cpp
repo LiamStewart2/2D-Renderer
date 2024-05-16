@@ -31,21 +31,28 @@ Renderer::~Renderer()
 
 void Renderer::clear()
 {
+	glClearColor(backgroundColorR, backgroundColorG, backgroundColorB, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
+
+void Renderer::setBackgroundColor(float r, float g, float b)
+{
+	backgroundColorR = r; backgroundColorG = g; backgroundColorB = b;
+}
+
 
 void Renderer::drawRect(float x, float y, float w, float h, float r, float g, float b)
 {
 	shader.useShader();
 
 	// TOP RIGHT
-	RectVertices[0] = x + w;	RectVertices[1] = y;		RectVertices[2] = r;	RectVertices[3] = g;	RectVertices[4] = b;	RectVertices[5] = 1;	RectVertices[6] = 0;
+	RectVertices[0] = x + w;	RectVertices[1] = y;		RectVertices[2] = r;	RectVertices[3] = g;	RectVertices[4] = b;	RectVertices[5] = 1;	RectVertices[6] = 1;
 	// BOTTOM RIGHT
-	RectVertices[7] = x + w;	RectVertices[8] = y - h;	RectVertices[9] = r;	RectVertices[10] = g;	RectVertices[11] = b;	RectVertices[12] = 1;	RectVertices[13] = 1;
+	RectVertices[7] = x + w;	RectVertices[8] = y - h;	RectVertices[9] = r;	RectVertices[10] = g;	RectVertices[11] = b;	RectVertices[12] = 1;	RectVertices[13] = 0;
 	// BOTTOM LEFT
-	RectVertices[14] = x;		RectVertices[15] = y - h;	RectVertices[16] = r;	RectVertices[17] = g;	RectVertices[18] = b;	RectVertices[19] = 0;	RectVertices[20] = 1;
+	RectVertices[14] = x;		RectVertices[15] = y - h;	RectVertices[16] = r;	RectVertices[17] = g;	RectVertices[18] = b;	RectVertices[19] = 0;	RectVertices[20] = 0;
 	// TOP LEFT
-	RectVertices[21] = x;		RectVertices[22] = y;		RectVertices[23] = r;	RectVertices[24] = g;	RectVertices[25] = b;	RectVertices[26] = 0;	RectVertices[27] = 0;
+	RectVertices[21] = x;		RectVertices[22] = y;		RectVertices[23] = r;	RectVertices[24] = g;	RectVertices[25] = b;	RectVertices[26] = 0;	RectVertices[27] = 1;
 
 	glBindVertexArray(VAO);
 
@@ -67,13 +74,13 @@ void Renderer::drawSprite(Sprite sprite, float x, float y, float scale)
 	float r = 1; float g = 1; float b = 1;
 
 	// TOP RIGHT
-	RectVertices[0] = x + w;	RectVertices[1] = y;		RectVertices[2] = r;	RectVertices[3] = g;	RectVertices[4] = b;	RectVertices[5] = 1;	RectVertices[6] = 0;
+	RectVertices[0] = x + w;	RectVertices[1] = y;		RectVertices[2] = r;	RectVertices[3] = g;	RectVertices[4] = b;	RectVertices[5] = 1;	RectVertices[6] = 1;
 	// BOTTOM RIGHT
-	RectVertices[7] = x + w;	RectVertices[8] = y - h;	RectVertices[9] = r;	RectVertices[10] = g;	RectVertices[11] = b;	RectVertices[12] = 1;	RectVertices[13] = 1;
+	RectVertices[7] = x + w;	RectVertices[8] = y - h;	RectVertices[9] = r;	RectVertices[10] = g;	RectVertices[11] = b;	RectVertices[12] = 1;	RectVertices[13] = 0;
 	// BOTTOM LEFT
-	RectVertices[14] = x;		RectVertices[15] = y - h;	RectVertices[16] = r;	RectVertices[17] = g;	RectVertices[18] = b;	RectVertices[19] = 0;	RectVertices[20] = 1;
+	RectVertices[14] = x;		RectVertices[15] = y - h;	RectVertices[16] = r;	RectVertices[17] = g;	RectVertices[18] = b;	RectVertices[19] = 0;	RectVertices[20] = 0;
 	// TOP LEFT
-	RectVertices[21] = x;		RectVertices[22] = y;		RectVertices[23] = r;	RectVertices[24] = g;	RectVertices[25] = b;	RectVertices[26] = 0;	RectVertices[27] = 0;
+	RectVertices[21] = x;		RectVertices[22] = y;		RectVertices[23] = r;	RectVertices[24] = g;	RectVertices[25] = b;	RectVertices[26] = 0;	RectVertices[27] = 1;
 
 	glBindVertexArray(VAO);
 
