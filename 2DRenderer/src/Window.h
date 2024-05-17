@@ -18,9 +18,9 @@ public:
 
 	// Uses GLFW Key codes
 	bool isKeyPressed(int key);
+	int WindowWidth; int WindowHeight;
 private:
 	GLFWwindow* window;
 
-	int WindowWidth; int WindowHeight;
 	const char* WindowName;
 };

@@ -50,6 +50,14 @@ void Renderer::drawRect(float x, float y, float w, float h, float r, float g, fl
 {
 	shader.useShader();
 
+	x = x / (window->WindowWidth / 2) - 1;
+	y = y / (window->WindowHeight / 2) - 1;
+	
+	w = w / (window->WindowWidth / 2);
+	h = h / (window->WindowHeight / 2);
+
+	r /= 255; g /= 255; b /= 255;
+
 	// TOP RIGHT
 	RectVertices[0] = x + w;	RectVertices[1] = y;		RectVertices[2] = r;	RectVertices[3] = g;	RectVertices[4] = b;	RectVertices[5] = 1;	RectVertices[6] = 1;
 	// BOTTOM RIGHT
@@ -75,6 +83,12 @@ void Renderer::drawSprite(Sprite sprite, float x, float y, float scale)
 
 	float w = sprite.texture.width * scale;
 	float h = sprite.texture.height * scale;
+
+	x = x / (window->WindowWidth / 2) - 1;
+	y = y / (window->WindowHeight / 2) - 1;
+
+	w = w / (window->WindowWidth / 2);
+	h = h / (window->WindowHeight / 2);
 
 	float r = 1; float g = 1; float b = 1;
 
