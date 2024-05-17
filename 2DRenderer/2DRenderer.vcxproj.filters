@@ -72,5 +72,8 @@
     <Image Include="res\sprites\player.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\sprites\tree.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
