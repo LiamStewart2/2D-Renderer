@@ -7,10 +7,8 @@ int main(void)
     Window window = Window(1080, 720, "2D Renderer");
     Renderer* renderer = new Renderer(&window);
     renderer->setBackgroundColor(1.0f, 1.0f, 1.0f);
-   
 
     Sprite sprite = Sprite("res/sprites/player.png");
-
 
     while (window.isOpen())
     {
